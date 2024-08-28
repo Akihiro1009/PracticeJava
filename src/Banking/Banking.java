@@ -24,10 +24,11 @@ public class Banking {
                     System.out.println("Thank you for using our bank.");
                 } else {
                     System.out.println("That is not a valid option. Try again.");
-                    break;
+                    break;//if I break here, it doesn't loop, and if I delete this break, it will loop forever.
                 }
             }while (!response.equalsIgnoreCase("y") && !response.equalsIgnoreCase("n"));
             //it loops forever.
+            //what is the "!"? does it mean not?
 
             System.out.println("Your current deposit is $" + balance.getCurrentbalance());
 

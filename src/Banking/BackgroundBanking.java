@@ -12,13 +12,15 @@ public class BackgroundBanking {
     }
 
     public void deposit(int amount){
-        if(amount < currentbalance){
-            currentbalance -= amount;
-            System.out.println("Successfully deposited $" + amount);
-        }
-        else{
-            System.out.println("Deposit must be positive.");
-        }
+        do {
+            if(amount < currentbalance){
+                currentbalance -= amount;
+                System.out.println("Successfully deposited $" + amount);
+            }
+            else{
+                System.out.println("Deposit must be positive.");
+            }
+        }while (!(amount <currentbalance));
     }
 
 }
