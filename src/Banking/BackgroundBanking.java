@@ -1,26 +1,24 @@
 package Banking;
 
 public class BackgroundBanking {
-    private int currentbalance = 0;
+    private int currentBalance = 0;
 
-    public BackgroundBanking(int currentbalance){
-        this.currentbalance = currentbalance;
+    public BackgroundBanking(int currentBalance) {
+        this.currentBalance = currentBalance;
     }
 
-    public int getCurrentbalance(){
-        return currentbalance;
+    public int getCurrentBalance() {
+        return currentBalance;
     }
 
-    public void deposit(int amount){
-        do {
-            if(amount < currentbalance){
-                currentbalance -= amount;
-                System.out.println("Successfully deposited $" + amount);
-            }
-            else{
-                System.out.println("Deposit must be positive.");
-            }
-        }while (!(amount <currentbalance));
+    public boolean withdraw(int amount) {
+        if (amount <= currentBalance){
+            currentBalance -= amount;
+            System.out.println("Successfully deposited $" + amount);
+            return true;
+        } else {
+            System.out.println("Deposit must be positive.");
+            return false;
+        }
     }
-
 }
