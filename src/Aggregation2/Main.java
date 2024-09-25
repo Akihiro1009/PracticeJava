@@ -8,7 +8,6 @@ public class Main {
         info_of_tom.display2(); //why does display2 need to be in Employ2 Class?
 
         System.out.println("I am aki");
-        // I am aki
     }
 
     /*
