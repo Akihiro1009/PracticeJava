@@ -14,5 +14,4 @@ public class Address2 {
     public String getAddress2(){
         return street + " , " +  resident + " , " + country;
     }
-
 }
