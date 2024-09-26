@@ -10,11 +10,11 @@ grade = input("Assessed grade of Student >>> ")
 
 file_path = "./src/StudentDB/StudentManage.java"
 
-data_java = f"studentList.add(new StudentInfo({id}, \"{name} \", \"{gender.capitalize()}\", {age}, {grade}));"
+data_java = f"studentList.add(new StudentInfo({id}, \"{name.capitalize()}\", \"{gender.capitalize()}\", {age}, {grade}));"
 
 with open(file_path, "r") as f:
     content_java = f.readlines()
 
-content_java.insert(-10, "            " + data_java + "\n")
+content_java.insert(-9, "            " + data_java + "\n")
 
-open(file_path, "w").write("\n".join(content_java))
+open(file_path, "w").write("".join(content_java))
