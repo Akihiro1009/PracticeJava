@@ -18,7 +18,7 @@ public class Main {
         }else if (answer.equals("add")){
             StudentAdd.addStudent();
         }else if (answer.equals("remove")){
-
+            StudentRemove.removeStudent();
         }else {
             System.out.println("Error");
         }

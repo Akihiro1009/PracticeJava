@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class StudentAdd {
     static Scanner scan = new Scanner(System.in);
     static BufferedWriter writer;
-    static BufferedReader reader; //do I need to read?
+    static BufferedReader reader;
     public static void main(String[] args) {
         System.out.println("Student Add V1");
     }
@@ -59,16 +59,15 @@ public class StudentAdd {
                     lines.add(insertLine, "            " + dataJava);
                 }
 
-                try {
-                    writer = new BufferedWriter(new FileWriter(filePath));
-                    for (String l : lines) {
-                        writer.write(l);
-                        writer.newLine();
-                    }
-                    writer.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
+                writer = new BufferedWriter(new FileWriter(filePath));
+                for (String l : lines) {
+                    writer.write(l);
+                    writer.newLine();
                 }
+                writer.close();
+
+                System.out.println("Student has successfully added.");
+
             }catch (IOException e) {
                 throw new RuntimeException(e);
             }
