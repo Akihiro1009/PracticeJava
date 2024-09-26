@@ -13,8 +13,8 @@ public class StudentRemove {
 
     public static void removeStudent(){
         System.out.print("Enter student ID or Name to remove >>> ");
-        int removeID = scanner.nextInt();
-        //String input = scanner.nextLine();
+        //int removeID = scanner.nextInt();
+        String input = scanner.nextLine();
 
         String filePass = "./src/StudentDB/StudentManage.java";
         List<String> lines = new ArrayList<>();
@@ -24,15 +24,15 @@ public class StudentRemove {
             String line;
 
             while((line = reader.readLine()) != null){
-                //if(input.matches("\\d+")){
-                    if(!line.contains("new StudentInfo("+ removeID + ",")) {
+                if(input.matches("\\d+")){
+                    if(!line.contains("new StudentInfo("+ input + ",")) {
                         lines.add(line);
-                    }/*else{
-                        if(!line.contains(".\"" + input.substring(0,1).toUpperCase()+ input.substring(1).toLowerCase() + "\"")) {
-                            lines.add(line);
-                        }
-                    }*/
-                //}
+                    }
+                } else{
+                    if(!line.contains(",\"" + input.substring(0,1).toUpperCase()+ input.substring(1).toLowerCase() + "\"")) { //.substring(0,1).toUpperCase()+ input.substring(1).toLowerCase()
+                        lines.add(line);
+                    }
+                }
             }
             reader.close();
 
