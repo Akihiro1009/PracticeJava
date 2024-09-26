@@ -41,15 +41,15 @@ public class StudentAdd {
 
         {
             try {
-                reader = new BufferedReader(new FileReader("StudentManage"));
+                reader = new BufferedReader(new FileReader("StudentManage.java"));
                 StringBuilder content = new StringBuilder();
                 String line;
                 List<String> lines = new ArrayList<>();
 
                 int insertLine = lines.size() - 9; //9th line from the bottom
-                int currentLine = 0;
+                //int currentLine = 0;
 
-                while ((line = reader.readLine() != null){
+                while ((line = reader.readLine()) != null){
                     lines.add(line);
                 }
 
@@ -65,7 +65,7 @@ public class StudentAdd {
 
         {
             try {
-                writer = new BufferedWriter(new FileWriter("StudentManage"));
+                writer = new BufferedWriter(new FileWriter("StudentManage.java"));
                 writer.write(dataJava);
             } catch (IOException e) {
                 throw new RuntimeException(e);
