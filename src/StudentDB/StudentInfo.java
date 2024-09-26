@@ -7,12 +7,12 @@ public class StudentInfo {
     int age;
     String gender;
 
-    public StudentInfo(int id, String name, String gender, int age, int grade) {
-        this.name = name;
-        this.grade = grade;
-        this.id = id;
-        this.age = age;
-        this.gender = gender;
+    public StudentInfo(int ID, String Name, String Gender, int Age, int Grade) {
+        this.name = Name;
+        this.grade = Grade;
+        this.id = ID;
+        this.age = Age;
+        this.gender = Gender;
     }
 
     @Override

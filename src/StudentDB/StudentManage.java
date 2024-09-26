@@ -13,8 +13,7 @@ public class StudentManage {
             studentList.add(new StudentInfo(3456, "James", "Male", 18, 5));
             studentList.add(new StudentInfo(4567, "John", "Male", 18, 5));
 
-            studentList.add(new StudentInfo(1009, "Aki", "Male", 18, 7));
-            studentList.add(new StudentInfo(1000, "Aki", "Male", 19, 20));
+            studentList.add(new StudentInfo(1008,"Toshi", "Mail", 7, 7));
 
     }
 

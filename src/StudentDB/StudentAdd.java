@@ -16,19 +16,20 @@ public class StudentAdd {
     }
 
     static void addStudent(){
-        System.out.println("Name of Student >>> ");
+        System.out.print("Name of Student >>> ");
         String name = scan.nextLine();
 
-        System.out.println("id of Student >>> ");
+        System.out.print("id of Student >>> ");
         int id = scan.nextInt();
+        scan.nextLine();
 
-        System.out.println("Gender of Student >>> ");
+        System.out.print("Gender of Student >>> ");
         String gender = scan.nextLine();
 
-        System.out.println("Age of Student >>> ");
+        System.out.print("Age of Student >>> ");
         int age = scan.nextInt();
 
-        System.out.println("Assessed grade of Student >>> ");
+        System.out.print("Assessed grade of Student >>> ");
         int grade = scan.nextInt();
 
         String filePath = "./src/StudentDB/StudentManage.java";
@@ -41,37 +42,37 @@ public class StudentAdd {
 
         {
             try {
-                reader = new BufferedReader(new FileReader("StudentManage.java"));
-                StringBuilder content = new StringBuilder();
+                reader = new BufferedReader(new FileReader(filePath));
+
                 String line;
                 List<String> lines = new ArrayList<>();
-
-                int insertLine = lines.size() - 9; //9th line from the bottom
                 //int currentLine = 0;
 
-                while ((line = reader.readLine()) != null){
+                while ((line = reader.readLine()) != null) {
                     lines.add(line);
                 }
+                reader.close();
 
-                if(insertLine >= 0){
+                int insertLine = lines.size() - 9; //9th line from the bottom
+
+                if (insertLine >= 0) {
                     lines.add(insertLine, "            " + dataJava);
                 }
 
-
-            } catch (FileNotFoundException e) {
+                try {
+                    writer = new BufferedWriter(new FileWriter(filePath));
+                    for (String l : lines) {
+                        writer.write(l);
+                        writer.newLine();
+                    }
+                    writer.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
-
-        {
-            try {
-                writer = new BufferedWriter(new FileWriter("StudentManage.java"));
-                writer.write(dataJava);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
         //content.insert(content.indexOf(lines[insertPosition]), "            " + dataJava + "\n");
     }
 

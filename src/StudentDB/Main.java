@@ -6,19 +6,20 @@ public class Main {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("How can I help you? \"StudentList\" \"Add new student\">>> ");
+        System.out.print("Hi, How can I help you? \n" +
+                "Type \"List\" to check student list. \n" +
+                "Type \"Add\" to add new student in the list. \n" +
+                "Type \"Remove\" to remove student from list. \n" +
+                ">>> ");
         String answer = scan.nextLine().toLowerCase();
 
-        if (answer.equals("studentlist") || answer.equals("student list") || answer.equals("list")) {
+        if (answer.equals("list")) {
             StudentManage.displayStudentManage();
-        }
-        if (answer.equals("add") || answer.equals("add new student") || answer.equals("new student")){
-            //run studentadd.py here
+        }else if (answer.equals("add")){
+            StudentAdd.addStudent();
+        }else if (answer.equals("remove")){
 
-
-        }
-
-        else{
+        }else {
             System.out.println("Error");
         }
 
