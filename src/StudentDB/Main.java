@@ -13,7 +13,9 @@ public class Main {
             StudentManage.displayStudentManage();
         }
         if (answer.equals("add") || answer.equals("add new student") || answer.equals("new student")){
-            //run studentadd.py
+            //run studentadd.py here
+
+
         }
 
         else{
