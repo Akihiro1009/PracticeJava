@@ -17,7 +17,7 @@ public class StudentRemove {
         String input = scanner.nextLine();
 
         String filePass = "./src/StudentDB/StudentManage.java";
-        List<String> lines = new ArrayList<>();
+        List<String> lines = new ArrayList<>(); //what is this for? what is the List and String doing in List<String>?
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filePass));

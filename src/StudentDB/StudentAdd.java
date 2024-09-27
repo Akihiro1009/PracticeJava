@@ -48,7 +48,7 @@ public class StudentAdd {
                 List<String> lines = new ArrayList<>();
                 //int currentLine = 0;
 
-                while ((line = reader.readLine()) != null) {
+                while ((line = reader.readLine()) != null) { //what is this null doing?
                     lines.add(line);
                 }
                 reader.close();
@@ -74,7 +74,4 @@ public class StudentAdd {
         }
         //content.insert(content.indexOf(lines[insertPosition]), "            " + dataJava + "\n");
     }
-
-
-
 }
