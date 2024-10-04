@@ -26,8 +26,8 @@ public class Main {
                 continue; //what is this continue?
             }
             System.out.println("Do you want to continue? [Y/N]");
-
             String again = scan.nextLine().toLowerCase();
+
             if (!again.equals("y")) {
                 break;
             }
