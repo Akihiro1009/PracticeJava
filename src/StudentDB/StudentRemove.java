@@ -12,42 +12,17 @@ public class StudentRemove {
 
 
     public static void removeStudent(){
-        System.out.print("Enter student ID or Name to remove >>> ");
+        System.out.print("Enter student ID to remove >>> ");
         //int removeID = scanner.nextInt();
-        String input = scanner.nextLine();
+        int input = scanner.nextInt();
 
-        String filePass = "./src/StudentDB/StudentManage.java";
-        List<String> lines = new ArrayList<>(); //what is this for? what is the List and String doing in List<String>?
-
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(filePass));
-            String line;
-
-            while((line = reader.readLine()) != null){
-                if(input.matches("\\d+")){
-                    if(!line.contains("new StudentInfo("+ input + ",")) {
-                        lines.add(line);
-                    }
-                } else{
-                    if(!line.contains(",\"" + input.substring(0,1).toUpperCase()+ input.substring(1).toLowerCase() + "\"")) { //.substring(0,1).toUpperCase()+ input.substring(1).toLowerCase()
-                        lines.add(line);
-                    }
-                }
+        int i = 0;
+        for(StudentInfo student : Main.studentInfoList){
+            if(student.id == input){
+                Main.studentInfoList.remove(i);
+                break;
             }
-            reader.close();
-
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filePass));
-            for(String l : lines){
-                    writer.write(l);
-                    writer.newLine();
-            }
-            writer.close();
-
-            System.out.println("Student removed successfully");
-            }catch (FileNotFoundException e) {
-            System.out.println("Error1");
-        }catch (IOException e) {
-            System.out.println("Error2");
+            i++;
         }
     }
 }
