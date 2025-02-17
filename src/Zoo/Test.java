@@ -17,5 +17,7 @@ public class Test {
         System.out.println("Name: " + catty.getName() + " | Age: " + catty.getAge() + " | Hair: " + catty.getHair());
         catty.talk();
         catty.eat();
+
+        Animal a1 = new Animal("tester",10);
     }
 }

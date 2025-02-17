@@ -5,7 +5,19 @@ public class Animal {
     private String name;
 
     private int age;
+    private int a;
 
+    public void add(){
+        a = 1;
+    }
+
+    public void add(int a, int b){
+        //code
+    }
+
+    public int add(int a, int b, int c){
+        return a;
+    }
 
     public Animal(String name, int age) {
         this.name = name;
