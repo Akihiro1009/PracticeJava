@@ -26,8 +26,8 @@ public class lotteryTicket {
 
         System.out.println(ticket[0][1]);
         System.out.println("-----------------");
-        for (int i = 0; i<3; i++){
-            for (int j = 0; j<4; j++){
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 4; j++){
                 System.out.print(ticket[i][j]);
                 System.out.print(" ");
             }
@@ -35,8 +35,21 @@ public class lotteryTicket {
         }
 
         System.out.println("-----------------");
-        for (int i = 0; i < 3; i++){
 
+        for (int i = 0; i < 3; i++){
+            int sum = 0;
+            for (int j = 0; j < 4; j++){
+                sum += ticket[i][j];
+
+            }
+            System.out.println("the sum of the row is " + sum);
+
+            /* for j without {} is ok?
+            for (int j = 0; j < 4; j++)
+                sum += ticket[i][j];
+
+
+            System.out.println("the sum of the rol is " + sum);*/
         }
     }
 }
