@@ -3,26 +3,40 @@ package lottery;
 import java.util.Arrays;
 
 public class lotteryTicket {
+
+    public static void LotteryTicket() {
+        int[][] ticket = {{15, 7, 28, 43},
+                            {26, 18, 48, 67},
+                            {52, 24, 94, 27}};
+    }
+
+
+    public static void allNums(){
+        /*for (int i = 0; i < 3; i++ ){
+            for (int j = 0; j < 3; j++){
+                System.out.println(ticket[i][j]);
+            }
+        }*/
+    }
+
     public static void main(String[] args) {
-        int[][] ticket1 = { {15, 7, 28},
-                            {26, 18, 43},
-                            {32, 4, 16}
-        };
+        int[][] ticket = {{15, 7, 28, 43},
+                {26, 18, 48, 67},
+                {52, 24, 94, 27}};
 
-        int[][] ticket2 = new int[3][3];
-
-        System.out.println(ticket1[0][1]);
+        System.out.println(ticket[0][1]);
         System.out.println("-----------------");
-
-        for(int i = 0; i < 3; i++) {
-            System.out.println(ticket1[i][i]);
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<4; j++){
+                System.out.print(ticket[i][j]);
+                System.out.print(" ");
+            }
+            System.out.println(); // is there a better way?
         }
 
         System.out.println("-----------------");
-        for (int i = 0; i < 3; i++ ){
-            for (int j = 0; j < 3; j++){
-                System.out.println(ticket1[i][j]);
-            }
+        for (int i = 0; i < 3; i++){
+
         }
     }
 }

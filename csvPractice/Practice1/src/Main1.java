@@ -1,10 +1,9 @@
 import java.io.*;
-import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Main1 {
     private static String file = "csvPractice/Practice1/src/data.csv";
     static Scanner sc = new Scanner(System.in);
 
