@@ -48,7 +48,6 @@ public class lotteryTicket {
             for (int j = 0; j < 4; j++)
                 sum += ticket[i][j];
 
-
             System.out.println("the sum of the rol is " + sum);*/
         }
     }
