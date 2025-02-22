@@ -42,7 +42,7 @@ public class lotteryTicket {
                 sum += ticket[i][j];
 
             }
-            System.out.println("the sum of the row is " + sum);
+            System.out.println("the sum of the row is" + sum);
 
             /* for j without {} is ok?
             for (int j = 0; j < 4; j++)
