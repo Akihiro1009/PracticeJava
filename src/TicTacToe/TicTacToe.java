@@ -9,8 +9,6 @@ public class TicTacToe {
                 {'-', '+', '-', '+', '-'},
                 {' ', '|',' ', '|', ' '},
         };
-
-
         /* old way.
         for(int i = 0; i < 5; i++){
             for (int j = 0; j < 5; j++){
@@ -19,5 +17,14 @@ public class TicTacToe {
             System.out.println();
         }*/
 
+        printGameBoard(gameBoard);
+    }
+    public static void printGameBoard(char[][] gameBoard) {
+        for(char[] row : gameBoard) {
+            for(char c : row) {
+                System.out.print(c);
+            }
+            System.out.println();
+        }
     }
 }
