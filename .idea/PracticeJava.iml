@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/csvPractice/Practice1/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/csvPractice/Practice2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/2DArray/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/enum/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
