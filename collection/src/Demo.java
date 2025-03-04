@@ -6,8 +6,9 @@ public class Demo {
         list.addItem("Ali"); System.out.println(list);
         list.addItem("Bob"); System.out.println(list);
         list.addItem("Jill"); System.out.println(list);
-        list.addItem("Kyle");
-        System.out.println("OOOO");
-        System.out.println(list);
+        list.addItem("Kyle"); System.out.println(list);
+
+        //copy this list to an array.
+        int c = 0;
     }
 }

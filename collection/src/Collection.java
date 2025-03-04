@@ -42,5 +42,4 @@ public class Collection {
         }
         return output;
     }
-
 }
