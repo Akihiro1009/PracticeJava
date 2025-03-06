@@ -2,7 +2,7 @@ import java.util.List;
 
 public class MockMain {
     public static void main(String[] args) {
-        List<String> list1 = List.of("Iwasaki ", "Akihiro", "Iwasaki", "Takatoshi", "Papinda", "Suchada", "Yamada", "Taro", "Satou", "Jyunichi", "Tanaka", "Toshizou", "Donald", "Trump"); //7 people.
+        List<String> list1 = List.of("Iwasaki ", "Akihiro", "Zama", "Miro", "Yamada", "Takeshi", "Yamada", "Taro", "Satou", "Jyunichi", "Tanaka", "Toshizou", "Donald", "Trump"); //7 people.
 
 
         Collection listName = new Collection();
@@ -11,6 +11,7 @@ public class MockMain {
             System.out.println(listName);
         }
         System.out.println(listName);
+
 
         /*while (true){
             int n = 0;
@@ -22,8 +23,16 @@ public class MockMain {
 
         //how to change collection to Array
 
-        for(int n = 0; n < 14; n++){
 
+        for(int n = 0; n < 14; n++){
+            //String[] CollectionName = new String[14];
+            listName.resetNext();
+            if (listName.isEmpty()){
+
+            }
+            //CollectionName[n] = listName.getNext();
+            System.out.println(listName.current);
+            //System.out.println(CollectionName);
         }
 
 

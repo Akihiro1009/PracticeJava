@@ -9,6 +9,19 @@ public class Demo {
         list.addItem("Kyle"); System.out.println(list);
 
         //copy this list to an array.
+        Collection collection = new Collection();
+// ...
+
+        Element element = collection.start;
         int c = 0;
+
+        collection.resetNext();
+        while ((element = element.next) != null) c++;
+
+        Element[] elements = new Element[c];
+        collection.resetNext();
+        for (int i = 0; (element = element.next) != null; i++) {
+            elements[c] = element;
+        }
     }
 }
