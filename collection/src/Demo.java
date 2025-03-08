@@ -23,5 +23,6 @@ public class Demo {
         for (int i = 0; (element = element.next) != null; i++) {
             elements[c] = element;
         }
+        //mineor chaneges
     }
 }
