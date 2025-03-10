@@ -34,6 +34,8 @@ public class Collection {
         }
     }
 
+
+
     public String toString()
     {	String output = "";
         this.resetNext();
