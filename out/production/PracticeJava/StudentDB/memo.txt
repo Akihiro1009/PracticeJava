@@ -1,0 +1,5 @@
+if I remove student and then check the student list, I can still see
+the student that I just removed in the list.
+
+the code in StudentAdd.java is discussing, I dont know where I should add BufferedWriter writer
+BufferedReader reader, List<String> lines = anew ArrayList<>()
