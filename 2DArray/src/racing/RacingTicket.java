@@ -28,11 +28,11 @@ public class RacingTicket { //競馬の馬券。A、B、Cがランダムであ�
             System.out.print("Guess a number from 1 to 10 >>> ");
             int guess = sc.nextInt();
             sc.nextLine();
-            if(guess ){//if guess is a int
+            //if(guess ){//todo if guess is a int
                 if (1 < guess && guess < 10) {
                     return;
                 }
-            }
+            //}
         }
 
         Random a = new Random();
