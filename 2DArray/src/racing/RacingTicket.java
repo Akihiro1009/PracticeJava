@@ -12,13 +12,27 @@ public class RacingTicket {
         Random c = new Random();
         int randomC = c.nextInt(10)+1;
 
+        while (randomB == randomA) {
+            //System.out.println("randomA : " + randomA);
+            //System.out.println("randomB : " + randomB);
+            b = new Random();
+            randomB = b.nextInt(10)+1;
+        }
+
+        while (randomC == randomB || randomC == randomA) {
+            c = new Random();
+            randomC = c.nextInt(10)+1;
+        }
+
         int[] winner = {randomA,randomB,randomC};
 
-        /*for (int i = 0; i < 50; i++){
+        /* //for loop to test the random(), loop for 50.
+        for (int i = 0; i < 50; i++){
             Random b = new Random();
             int randomB = b.nextInt(10)+1;
             System.out.println(randomB);
-        }*/
+        }
+        */
 
         System.out.println(randomA);
         System.out.println(randomB);
