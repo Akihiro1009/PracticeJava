@@ -24,7 +24,7 @@ public class RacingTicket { //競馬の馬券。A、B、Cがランダムであ�
 
     }
     public static void system(){
-        while(true) {
+        //while(true) { //todo make it a true statement
             System.out.print("Guess a number from 1 to 10 >>> ");
             int guess = sc.nextInt();
             sc.nextLine();
@@ -33,7 +33,7 @@ public class RacingTicket { //競馬の馬券。A、B、Cがランダムであ�
                     return;
                 }
             //}
-        }
+        //}
 
         Random a = new Random();
         int randomA = a.nextInt(10)+1;
