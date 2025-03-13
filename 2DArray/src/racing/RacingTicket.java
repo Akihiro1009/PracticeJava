@@ -2,9 +2,14 @@ package racing;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
-public class RacingTicket {
+public class RacingTicket { //競馬の馬券。A、B、Cがランダムであたりで、
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Guess a number from 1 to 10 >>> ");
+        int guess = sc.nextInt();
+
         Random a = new Random();
         int randomA = a.nextInt(10)+1;
         Random b = new Random();
